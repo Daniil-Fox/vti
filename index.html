@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>ВТИ</title>
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link
+    rel="preload"
+    href="fonts/Onest-Light.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Onest-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Onest-Medium.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Onest-SemiBold.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Ubuntu-Light.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <link
+    rel="preload"
+    href="fonts/Ubuntu-Regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+
+  <link rel="stylesheet" href="css/vendor.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script defer src="js/main.js"></script>
+</head>
+
+
+  <body class="page__body">
+    <div class="site-container">
+      <header class="quiz-header">
+  <div class="quiz-container quiz-header__container">
+    <a href="/" class="quiz-header__logo">
+      <img src="./img/svg/logo.svg" alt="" />
+    </a>
+
+    <div class="phone-dropdown" id="phoneDropdown">
+      <div class="phone-dropdown__trigger" id="phoneTrigger">
+        <a href="tel:+78002006965" class="phone-dropdown__number"
+          >+7 800 200 6965</a
+        >
+        <svg
+          width="8"
+          height="7"
+          viewBox="0 0 8 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="phone-dropdown__arrow"
+          id="phoneArrow"
+        >
+          <path
+            d="M3.89697 6.75L7.79409 7.34099e-07L-0.000141031 5.27059e-08L3.89697 6.75Z"
+            fill="currentColor"
+          />
+        </svg>
+      </div>
+
+      <div class="phone-dropdown__menu" id="phoneMenu">
+        <div class="phone-dropdown__item">
+          <div class="phone-dropdown__location">
+            г. Владивосток, ул. Калинина 241
+          </div>
+        </div>
+        <div class="phone-dropdown__item">
+          <div class="phone-dropdown__location">
+            г. Москва, Автозаводская улица, 23А К2, офис 413
+          </div>
+        </div>
+        <button class="phone-dropdown__button" id="callbackButton">
+          обратный звонок
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="quiz-menu" data-menu>
+  <div class="quiz-menu__overlay" data-menu-overlay></div>
+
+  <div class="quiz-menu__content">
+    <nav class="quiz-nav">
+      <ul>
+        <li>
+          <a href="https://vlad-truck.ru/o-kompanii">о&nbsp;компании</a>
+        </li>
+        <li>
+          <a href="https://vlad-truck.ru/calculator">калькулятор</a>
+        </li>
+        <li>
+          <a href="https://vlad-truck.ru/kontakty">контакты</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+</header>
+
+      <main class="main">
+        <section class="quiz-hero">
+          <div class="quiz-hero__gallery swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    srcset="./img/hero/02-mob.webp"
+                    type="image/webp"
+                    media="(max-width: 576px)"
+                  />
+                  <source srcset="./img/hero/02.webp" type="image/webp" />
+                  <img
+                    loading="lazy"
+                    src="./img/hero/02.webp"
+                    class="image"
+                    width=""
+                    height=""
+                    alt=""
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="quiz-container">
+            <div class="quiz-hero__content">
+              <h1 class="quiz-hero__title">
+                Персональная подборка авто за&nbsp;5&nbsp;минут
+              </h1>
+              <ul class="list-reset quiz-hero__list">
+                <li>
+                  <img src="./img/svg/back.svg" alt="" />
+                  проверка авто перед покупкой
+                </li>
+                <li>
+                  <img src="./img/svg/delivery.svg" alt="" />
+                  10000+ автомобилей привезено
+                </li>
+
+                <li>
+                  <img src="./img/svg/park.svg" alt="" />
+                  Доставка по всей России
+                </li>
+              </ul>
+              <a href="./quest.html" class="btn-reset quiz-btn quiz-hero__btn">
+                Пройти тест
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+  <div class="container"></div>
+</footer>
+
+    </div>
+  </body>
+</html>
