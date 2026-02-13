@@ -16775,26 +16775,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ "./src/js/_vars.js"
-/*!*************************!*\
-  !*** ./src/js/_vars.js ***!
-  \*************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  windowEl: window,
-  documentEl: document,
-  htmlEl: document.documentElement,
-  bodyEl: document.body
-});
-
-/***/ },
-
 /***/ "./src/js/components/sliders.js"
 /*!**************************************!*\
   !*** ./src/js/components/sliders.js ***!
@@ -17083,118 +17063,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /***/ },
 
-/***/ "./src/js/functions/burger.js"
-/*!************************************!*\
-  !*** ./src/js/functions/burger.js ***!
-  \************************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _functions_disable_scroll_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../functions/disable-scroll.js */ "./src/js/functions/disable-scroll.js");
-/* harmony import */ var _functions_enable_scroll_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../functions/enable-scroll.js */ "./src/js/functions/enable-scroll.js");
-
-
-(function () {
-  const burger = document?.querySelector("[data-burger]");
-  const menu = document?.querySelector("[data-menu]");
-  const menuItems = document?.querySelectorAll("[data-menu-item]");
-  const overlay = document?.querySelector("[data-menu-overlay]");
-  burger?.addEventListener("click", e => {
-    burger?.classList.toggle("burger--active");
-    menu?.classList.toggle("menu--active");
-    if (menu?.classList.contains("menu--active")) {
-      burger?.setAttribute("aria-expanded", "true");
-      burger?.setAttribute("aria-label", "Закрыть меню");
-      document.body.classList.add("quiz-menu-open");
-    } else {
-      burger?.setAttribute("aria-expanded", "false");
-      burger?.setAttribute("aria-label", "Открыть меню");
-      document.body.classList.remove("quiz-menu-open");
-    }
-  });
-  overlay?.addEventListener("click", () => {
-    burger?.setAttribute("aria-expanded", "false");
-    burger?.setAttribute("aria-label", "Открыть меню");
-    burger.classList.remove("burger--active");
-    menu.classList.remove("menu--active");
-    document.body.classList.remove("quiz-menu-open");
-  });
-  menuItems?.forEach(el => {
-    el.addEventListener("click", () => {
-      burger?.setAttribute("aria-expanded", "false");
-      burger?.setAttribute("aria-label", "Открыть меню");
-      burger.classList.remove("burger--active");
-      menu.classList.remove("menu--active");
-      document.body.classList.remove("quiz-menu-open");
-    });
-  });
-})();
-
-/***/ },
-
-/***/ "./src/js/functions/disable-scroll.js"
-/*!********************************************!*\
-  !*** ./src/js/functions/disable-scroll.js ***!
-  \********************************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   disableScroll: () => (/* binding */ disableScroll)
-/* harmony export */ });
-/* harmony import */ var _vars_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars.js */ "./src/js/_vars.js");
-
-const disableScroll = () => {
-  const fixBlocks = document?.querySelectorAll('.fixed-block');
-  const pagePosition = window.scrollY;
-  const paddingOffset = `${window.innerWidth - _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.offsetWidth}px`;
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'none';
-  fixBlocks.forEach(el => {
-    el.style.paddingRight = paddingOffset;
-  });
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.paddingRight = paddingOffset;
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.classList.add('dis-scroll');
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.dataset.position = pagePosition;
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.top = `-${pagePosition}px`;
-};
-
-/***/ },
-
-/***/ "./src/js/functions/enable-scroll.js"
-/*!*******************************************!*\
-  !*** ./src/js/functions/enable-scroll.js ***!
-  \*******************************************/
-(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   enableScroll: () => (/* binding */ enableScroll)
-/* harmony export */ });
-/* harmony import */ var _vars_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../_vars.js */ "./src/js/_vars.js");
-
-const enableScroll = () => {
-  const fixBlocks = document?.querySelectorAll('.fixed-block');
-  const body = document.body;
-  const pagePosition = parseInt(_vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.dataset.position, 10);
-  fixBlocks.forEach(el => {
-    el.style.paddingRight = '0px';
-  });
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.paddingRight = '0px';
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.style.top = 'auto';
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.classList.remove('dis-scroll');
-  window.scroll({
-    top: pagePosition,
-    left: 0
-  });
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].bodyEl.removeAttribute('data-position');
-  _vars_js__WEBPACK_IMPORTED_MODULE_0__["default"].htmlEl.style.scrollBehavior = 'smooth';
-};
-
-/***/ },
-
 /***/ "./src/js/telegram-sender.js"
 /*!***********************************!*\
   !*** ./src/js/telegram-sender.js ***!
@@ -17356,110 +17224,98 @@ var __webpack_exports__ = {};
   \************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
-/* harmony import */ var _functions_burger_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./functions/burger.js */ "./src/js/functions/burger.js");
-/* harmony import */ var _telegram_sender_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./telegram-sender.js */ "./src/js/telegram-sender.js");
+/* harmony import */ var _telegram_sender_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./telegram-sender.js */ "./src/js/telegram-sender.js");
 
 
-
-
-// Обработка отправки формы в Telegram
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector(".quest__quiz");
-  if (form) {
-    form.addEventListener("submit", async e => {
-      // Обработчик формы будет добавлен здесь
-      // Форма отправляется после окончания квиза
-    });
-  }
-});
 
 // Экспортируем функции для использования в других местах
-// window.sendToTelegram = sendToTelegram;
-
+window.sendToTelegram = _telegram_sender_js__WEBPACK_IMPORTED_MODULE_1__.sendToTelegram;
 (function () {
   const dropdown = document.getElementById("phoneDropdown");
   const trigger = document.getElementById("phoneTrigger");
   const menu = document.getElementById("phoneMenu");
   const arrow = document.getElementById("phoneArrow");
   const callbackButton = document.getElementById("callbackButton");
-  let isOpen = false;
-  let isMobile = window.innerWidth <= 576;
+  if (trigger) {
+    let isOpen = false;
+    let isMobile = window.innerWidth <= 576;
 
-  // Проверка мобильного устройства
-  function checkMobile() {
-    isMobile = window.innerWidth <= 576;
-  }
+    // Проверка мобильного устройства
+    function checkMobile() {
+      isMobile = window.innerWidth <= 576;
+    }
 
-  // Открытие меню
-  function openMenu() {
-    isOpen = true;
-    menu.classList.add("phone-dropdown__menu--open");
-    arrow.classList.add("phone-dropdown__arrow--open");
-  }
+    // Открытие меню
+    function openMenu() {
+      isOpen = true;
+      menu.classList.add("phone-dropdown__menu--open");
+      arrow.classList.add("phone-dropdown__arrow--open");
+    }
 
-  // Закрытие меню
-  function closeMenu() {
-    isOpen = false;
-    menu.classList.remove("phone-dropdown__menu--open");
-    arrow.classList.remove("phone-dropdown__arrow--open");
-  }
+    // Закрытие меню
+    function closeMenu() {
+      isOpen = false;
+      menu.classList.remove("phone-dropdown__menu--open");
+      arrow.classList.remove("phone-dropdown__arrow--open");
+    }
 
-  // Переключение меню
-  function toggleMenu() {
-    if (isOpen) {
+    // Переключение меню
+    function toggleMenu() {
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    // Обработка клика на триггер (для мобильных)
+    trigger.addEventListener("click", function (e) {
+      if (isMobile) {
+        e.stopPropagation();
+        toggleMenu();
+      }
+    });
+
+    // Обработка наведения (для десктопа)
+    dropdown.addEventListener("mouseenter", function () {
+      if (!isMobile) {
+        openMenu();
+      }
+    });
+    dropdown.addEventListener("mouseleave", function () {
+      if (!isMobile) {
+        closeMenu();
+      }
+    });
+
+    // Закрытие при клике вне области (для мобильных)
+    document.addEventListener("click", function (e) {
+      if (isMobile && isOpen && !dropdown.contains(e.target)) {
+        closeMenu();
+      }
+    });
+
+    // Обработка кнопки обратного звонка
+    callbackButton.addEventListener("click", function () {
+      // Здесь можно добавить логику открытия модального окна
+      // или перехода на страницу с формой
+      window.location.href = "tel:+78002006965";
       closeMenu();
-    } else {
-      openMenu();
-    }
-  }
+    });
 
-  // Обработка клика на триггер (для мобильных)
-  trigger.addEventListener("click", function (e) {
-    if (isMobile) {
-      e.stopPropagation();
-      toggleMenu();
-    }
-  });
+    // Обработка изменения размера окна
+    window.addEventListener("resize", function () {
+      checkMobile();
 
-  // Обработка наведения (для десктопа)
-  dropdown.addEventListener("mouseenter", function () {
-    if (!isMobile) {
-      openMenu();
-    }
-  });
-  dropdown.addEventListener("mouseleave", function () {
-    if (!isMobile) {
-      closeMenu();
-    }
-  });
+      // Закрываем меню при смене режима
+      if (isOpen) {
+        closeMenu();
+      }
+    });
 
-  // Закрытие при клике вне области (для мобильных)
-  document.addEventListener("click", function (e) {
-    if (isMobile && isOpen && !dropdown.contains(e.target)) {
-      closeMenu();
-    }
-  });
-
-  // Обработка кнопки обратного звонка
-  callbackButton.addEventListener("click", function () {
-    // Здесь можно добавить логику открытия модального окна
-    // или перехода на страницу с формой
-    window.location.href = "tel:+78002006965";
-    closeMenu();
-  });
-
-  // Обработка изменения размера окна
-  window.addEventListener("resize", function () {
+    // Инициализация
     checkMobile();
-
-    // Закрываем меню при смене режима
-    if (isOpen) {
-      closeMenu();
-    }
-  });
-
-  // Инициализация
-  checkMobile();
+  }
 })();
 })();
 
