@@ -1096,7 +1096,7 @@ a {
   min-width: 0;
 }
 .quest__steps {
-  font-family: var(--second-family);
+  font-family: var(--third-family);
   font-weight: 300;
   font-size: 2.2rem;
   line-height: 110%;
