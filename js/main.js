@@ -17208,8 +17208,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   sendToTelegram: () => (/* binding */ sendToTelegram)
 /* harmony export */ });
 // Telegram Bot отправка данных
-const TELEGRAM_BOT_TOKEN = "";
-const TELEGRAM_CHAT_ID = "";
+const TELEGRAM_BOT_TOKEN = "8564318834:AAHdjAUnvV_eOLCjeoxz7QusEv2p242YMCw";
+const TELEGRAM_CHAT_ID = "-5159656063";
 async function sendToTelegram(formData) {
   try {
     // Собираем данные из формы
